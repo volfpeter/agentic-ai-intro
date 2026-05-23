@@ -276,7 +276,7 @@ Trade-offs:
 
 <img src="/intelligence-vs-cost.png" style="border-radius: 4px;">
 
-Source: https://artificialanalysis.ai/
+<p style="opacity: 0.5; text-align: end;">Source: <a href="https://artificialanalysis.ai/">https://artificialanalysis.ai/</a></p>
 
 ---
 layout: two-cols-header
@@ -601,16 +601,25 @@ _Execute (prompt or `/to-tasks` + `/do-tasks`):_
 - Break into subtasks, execute and review one by one
 
 ---
-layout: section
----
 
-# How to keep up
+# Resources
+
+<p style="opacity: 1"><em>Reading:</em></p>
+
+- Agentic Coding is a Trap: https://larsfaye.com/articles/agentic-coding-is-a-trap
+
+_Skills:_
+
+- https://github.com/mitsuhiko/agent-stuff
+- https://github.com/multica-ai/andrej-karpathy-skills
+- https://github.com/mattpocock/skills
+- https://github.com/anthropics/skills
 
 ---
 layout: two-cols-header
 ---
 
-# Information sources
+# How to keep up
 
 ::left::
 
@@ -635,8 +644,10 @@ YouTube, podcast:
 - AI Explained, YT: @aiexplained-official
 - Theo t3.gg, YT: @t3dotgg
 
-GitHub, agent skills:
+---
 
-- https://github.com/mitsuhiko/agent-stuff
-- https://github.com/mattpocock/skills
-- https://github.com/anthropics/skills
+<p style="text-align: center;">Thanks for your patience</p>
+
+<img src="/karpathy-microgpt.jpg" style="border-radius: 4px; height: 75%; margin: auto;">
+
+<p style="opacity: 0.5; text-align: end;">Source: <a href="https://x.com/karpathy/status/2021862247568642485">https://x.com/karpathy/status/2021862247568642485</a></p>
