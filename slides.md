@@ -630,6 +630,7 @@ Twitter/X:
 - Mitchell Hashimoto, @mitchellh
 - Dax Raad, @thdxr
 - Armin Ronacher, @mitsuhiko
+- David Heinemeier Hansson, @dhh
 - Simon Willison, @simonw
 - Matt Pocock, @mattpocockuk
 - Peter Steinberger, @steipete
