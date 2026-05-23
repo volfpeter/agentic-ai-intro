@@ -1,0 +1,18 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "local": {
+      // Using a model, running locally e.g. with llama.cpp
+      "name": "Local",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://127.0.0.1:9090/v1",
+      },
+      "models": {
+        "unsloth/gemma-4-26B-A4B-it-GGUF": {
+          "name": "Gemma 4 26B A4B",
+        },
+      },
+    },
+  },
+}
