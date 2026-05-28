@@ -46,7 +46,8 @@ layout: two-cols-header
 _Traditional AI (chat):_
 
 - Model: one _prompt_ → one _response_
-- Cannot take actions outside the chat window
+- No concept of an environment
+- No autonomy
 
 <br>
 
@@ -56,7 +57,7 @@ Model and environment, connected by a _harness_:
 
 - Context initialization and management
 - Iterative loop: think → interact → observe
-- Interact with _tools_ (read, write, bash, input requests, MCP)
+- Interact with _tools_ (read, write, bash, ask)
 
 ::right::
 
@@ -118,10 +119,9 @@ _Agent workflow:_
 # From chat to agents - takeaways
 
 - The model sees the environment through the context: _context engineering_ is key
-- The loop replaces the human in the middle
-- Model can act on its _environment_ using its _knowledge_ and _intelligence_
+- The agent loop replaces the human between the model and the environment
 - _Project environment_ is important: typing, linters, tests, documentation, ...
-- The _harness_ can be customized: _AGENTS.md_, _commands_, _skills_, _custom agents_, ...
+- The _harness_ can be customized: _AGENTS.md_, _skills_, _system prompt_, ...
 - Asking the user can be a tool for the agent, instruct the model to use it
 - The loop continues until the model believes its goal is met
 
@@ -133,19 +133,20 @@ layout: two-cols-header
 
 Guidance, memory, convenience, extension
 
+Think of it like software, keep it minimal and improve iteratively
+
 ::left::
 
 <p style="opacity: 1"><code>AGENTS.md</code>:</p>
 
 - General guidance and instructions
 - Prevent common failure modes
-- Keep minimal, improve iteratively
 
 _Commands:_
 
 - Reusable prompts
 - Triggered by the user
-- Not in all harnesses
+- Implemented as skills in some harnesses
 
 ::right::
 
@@ -161,7 +162,7 @@ _Agent configuration:_
 
 _MCP:_
 
-- Add extra tools
+- Extra tools and resources
 
 ---
 layout: section
@@ -169,7 +170,7 @@ layout: section
 
 # Landscape
 
-Models and tools
+Labs, models, and trade-offs
 
 ---
 
@@ -182,7 +183,7 @@ Models and tools
 
 The best and most expensive models.
 
-Usually available with subscription or API pricing directly from the lab.
+Usually available with subscription and token/API pricing directly from the lab.
 
 Subscription may not work in all agent harnesses.
 
@@ -190,16 +191,16 @@ Subscription may not work in all agent harnesses.
 
 # Model landscape - open weight
 
-- Moonshot AI: Kimi k2.5 and k2.6
+- Moonshot AI: Kimi k2.6
 - DeepSeek: DeepSeek v4 Pro and v4 Flash
-- Z.AI: GLM 5.0 and GLM 5.1
+- Z.AI: GLM 5.1
 - Xiaomi: Mimo v2.5 Pro and v2.5 Flash
 - Alibaba: Qwen 3.7 Max
 - Minimax: Minimax m2.5 and m2.7
 
 Close to proprietary models (at least for coding) with far better pricing.
 
-Available from inference providers with subscription or API pricing.
+Available from inference providers with subscription or token/API pricing.
 
 Subscription can be used in all harnesses.
 
@@ -232,19 +233,19 @@ Private, can be fine-tuned for specific tasks.
 
 - API pricing (per million tokens): input, output, and cache read
 - Agentic AI is token-hungry, cache read is often the dominant factor
-- Subscriptions are heavily subsidised, >10-20x
+- Subscriptions are heavily subsidised vs. API pricing, >10-20x
 
 _Privacy:_
 
-- Free models: provider likely keeps and uses data for training
+- Free models: provider likely keeps and uses your data
 - Zero data retention: inference providers may promise not to keep data
 - Codebase reconstruction: feasible but unlikely, value is in human feedback for RL
 
 _Security:_
 
 - Trust but verify: agents can be confidently wrong
+- Tool misuse: malicious skills, broad tool access and permissions, data leaks via tool calls
 - Prompt injection: data and instructions are indistinguishable, data can contain hidden motives
-- Tool misuse: malicious skills, broad tool access and permissions, data leak in tool calls
 
 ---
 layout: two-cols-header
@@ -258,7 +259,7 @@ Every coin has two sides
 
 Productivity gains:
 
-- 0 to 1 for personal software
+- 0 to 1, for example personal software
 - 10-100x??? Real value: exploration, prototyping, second opinion, review
 - ~1x, but better quality or less mental effort
 
@@ -276,7 +277,7 @@ Trade-offs:
 
 <img src="/intelligence-vs-cost.png" style="border-radius: 4px;">
 
-<p style="opacity: 0.5; text-align: end;">Source: <a href="https://artificialanalysis.ai/">https://artificialanalysis.ai/</a></p>
+<p style="opacity: 0.5; text-align: end;"><a href="https://artificialanalysis.ai/">https://artificialanalysis.ai/</a></p>
 
 ---
 layout: two-cols-header
@@ -391,7 +392,7 @@ model = OpenAIChatModel(
     provider=OpenAIProvider("http://127.0.0.1:9090/v1"),
 )
 
-agent = Agent(model, instructions="Be concise.")
+agent = Agent(model, instructions="Always respond with a haiku.")
 
 result = agent.run_sync("What is agentic AI?")
 print(result.output)
@@ -651,4 +652,4 @@ YouTube, podcast:
 
 <img src="/karpathy-microgpt.jpg" style="border-radius: 4px; height: 75%; margin: auto;">
 
-<p style="opacity: 0.5; text-align: end;">Source: <a href="https://x.com/karpathy/status/2021862247568642485">https://x.com/karpathy/status/2021862247568642485</a></p>
+<p style="opacity: 0.5; text-align: end;"><a href="https://x.com/karpathy/status/2021862247568642485">https://x.com/karpathy/status/2021862247568642485</a></p>
