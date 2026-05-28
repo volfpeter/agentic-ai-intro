@@ -415,21 +415,21 @@ layout: two-cols-header
 _Tips:_
 
 - Always use version control
-- Start with a vanilla agent setup
+- Start with a vanilla harness
 - Start with simple, scoped tasks
 - Instruct the agent to ask questions
-- Explain how the result will be evaluated
 - Save your prompts
 - Read the agent's output
 - Review every change
 - Question the agent's thinking
+- Explain how the result will be evaluated
 
 ::right::
 
 _Every interaction gives feedback on:_
 
-- The model's capabilities and limits
-- The model's failure modes
+- The model's capabilities
+- The model's limits and failure modes
 - How well your project is set up for agents
 - Your prompts
 
