@@ -232,7 +232,7 @@ Private, can be fine-tuned for specific tasks.
 <p style="opacity: 1"><em>Costs:</em></p>
 
 - API pricing (per million tokens): input, output, and cache read
-- Agentic AI is token-hungry, cache read is often the dominant factor
+- Agentic AI is token-hungry; cache read is often the dominant factor
 - Subscriptions are heavily subsidised vs. API pricing, >10-20x
 
 _Privacy:_
@@ -337,7 +337,7 @@ _Assistants ("claws"):_
 _IDEs with agent features:_
 
 - Zed: https://zed.dev
-- VSCode and forks (Cursor)
+- VS Code and forks (Cursor)
 - Your favorite editor + agent extensions
 
 _Research synthesis:_
@@ -450,9 +450,9 @@ _Install:_
 - npm: `npm i -g opencode-ai`
 - Other: https://opencode.ai
 
-Start from terminal with `opencode`
+Start from terminal: `opencode`
 
-Recommended model: `DeepSeek V4 Flash Free`
+Free model: `DeepSeek V4 Flash Free`
 
 ::right::
 
@@ -494,7 +494,8 @@ _`practice/` folder:_
 <p style="opacity: 1"><em>Ask, don't instruct:</em></p>
 
 - Instead of "Do this ..." ask "How would you do this ..."
-- The agent articulates the problem and the possible solutions, opportunity for correction before action, opportunity for learning
+- The agent articulates the problem and the possible solutions
+- Opportunity for correction and learning
 
 _Self-analysis:_
 
