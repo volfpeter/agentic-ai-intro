@@ -34,7 +34,7 @@ Useful commands:
 ## Experimentation and examples
 
 - `challenges/`: Coding challenges for experimenting with different agents (e.g. `teacher`), commands (e.g. `/explain`), and skills.
-- `projects/`: More complex project ideas for experimentation. Complex enough to try the `review` agent, the `/learn`, `/grill-me`, `/checkpoint`, `/to-plan`, `/what-went-wrong` commands or the `changelog` skill.
+- `projects/`: More complex project ideas for experimentation. Complex enough to try the `/learn`, `/grill-me`, `/checkpoint`, `/to-plan`, `/what-went-wrong` commands and the `review` or `changelog` skills.
 - `ai/`: Memory, prompts can go here, and agents can also store plans, task lists, etc. in this folder. It is normally git ignored.
 - `sessions/`: A couple of example sessions.
 - `arxiv-md/`: Different implementation milestones of the `arxiv-markdown-download.md` project (in `projects/`). Every folder contains the OpenCode session (`opencode-session.md`) that implemented the given milestone.

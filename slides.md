@@ -510,7 +510,7 @@ _Self-analysis:_
 
 <p style="opacity: 1"><em>Prompt inversion:</em></p>
 
-- Before acting: ask the agent to draft a better prompt instead of acting
+- Before acting: ask the agent to draft a better prompt
 - After failure: ask what prompt would have worked better
 
 _Declarative prompting (`/declarative`):_
@@ -521,7 +521,7 @@ _Declarative prompting (`/declarative`):_
 _Summarize (`/checkpoint`):_
 
 - Produce a self-contained prompt for a new session
-- Start fresh with full context
+- Start fresh with clean, informative context
 
 ---
 
@@ -546,13 +546,13 @@ _Session analysis (`/what-went-wrong`):_
 
 Learn what you don't want to outsource
 
-_Ask for explanation (`/explain`):_
+_Ask for explanation (`/explain`, `/review`):_
 
 - Explain concepts, patterns, terminology
 - Provide pointers and topics for learning
 - Does it need to be this complicated?
 
-_Special agents (`teacher`, `review`):_
+_Special agents (`teacher`):_
 
 - Explain, review, guide when stuck
 - Do not solve the problem
@@ -611,6 +611,7 @@ _Execute (prompt or `/to-tasks` + `/do-tasks`):_
 
 _Skills:_
 
+- https://github.com/hunvreus/skill-issue
 - https://github.com/mitsuhiko/agent-stuff
 - https://github.com/multica-ai/andrej-karpathy-skills
 - https://github.com/mattpocock/skills
@@ -627,15 +628,16 @@ layout: two-cols-header
 Twitter/X:
 
 - Andrej Karpathy, @karpathy
-- Demis Hassabis, @demishassabis
 - Mitchell Hashimoto, @mitchellh
 - Dax Raad, @thdxr
 - Armin Ronacher, @mitsuhiko
+- Ronan Berder, @hunvreus
 - David Heinemeier Hansson, @dhh
+- Mario Zechner, @badlogicgames
 - Simon Willison, @simonw
+- Demis Hassabis, @demishassabis
 - Matt Pocock, @mattpocockuk
 - Peter Steinberger, @steipete
-- Mario Zechner, @badlogicgames
 
 ::right::
 
@@ -644,7 +646,8 @@ YouTube, podcast:
 - Lex Fridman Podcast: https://lexfridman.com/podcast
 - Dwarkesh Podcast: https://www.dwarkesh.com/podcast
 - AI Explained, YT: @aiexplained-official
-- Theo t3.gg, YT: @t3dotgg
+- Theo Browne, YT: @t3dotgg
+- Michael Paulson, YT: @ThePrimeTimeagen
 
 ---
 
