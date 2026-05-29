@@ -30,6 +30,16 @@ Find me at:
 - Twitter/X: https://x.com/volfpeter
 
 ---
+
+# Table of contents
+
+- From chat to agents
+- Landscape (models, costs, trade-offs)
+- AI tools
+- Practice, patterns, resources
+- Discussion
+
+---
 layout: section
 ---
 
@@ -118,8 +128,8 @@ _Agent workflow:_
 
 # From chat to agents - takeaways
 
-- The model sees the environment through the context: _context engineering_ is key
 - The agent loop replaces the human between the model and the environment
+- The model sees the environment through the context: _context engineering_ is key
 - _Project environment_ is important: typing, linters, tests, documentation, ...
 - The _harness_ can be customized: _AGENTS.md_, _skills_, _system prompt_, ...
 - Asking the user can be a tool for the agent, instruct the model to use it
@@ -158,7 +168,7 @@ _Skills:_
 _Agent configuration:_
 
 - System prompt
-- Model configuration, e.g. temperature
+- Permissions, model configuration
 
 _MCP:_
 
@@ -261,7 +271,7 @@ Productivity gains:
 
 - 0 to 1, for example personal software
 - 10-100x??? Real value: exploration, prototyping, second opinion, review
-- ~1x, but better quality or less mental effort
+- ~1x, but better quality, less mental effort, or more time for learning
 
 ::right::
 
@@ -422,7 +432,6 @@ _Tips:_
 - Read the agent's output
 - Review every change
 - Question the agent's thinking
-- Explain how the result will be evaluated
 
 ::right::
 
@@ -516,7 +525,7 @@ _Self-analysis:_
 
 _Declarative prompting (`/declarative`):_
 
-- State your goal and success criteria, not the solution
+- State your goal and success criteria, not how to get there
 - Let the agent decide the approach
 
 _Summarize (`/checkpoint`):_
@@ -555,9 +564,9 @@ _Ask for explanation (`/explain`, `/review`):_
 
 _Special agents (`teacher`):_
 
-- Explain, review, guide when stuck
 - Do not solve the problem
 - Assess the user's understanding through questions
+- Explain, review, guide when stuck
 
 ---
 
@@ -589,7 +598,7 @@ Not spec-driven development
 
 _Discuss (chat or `/grill-me`):_
 
-- Reach shared understanding of the problem
+- Reach shared understanding, prevent guessing
 - Identify potential solutions
 
 _Prototype or plan:_
