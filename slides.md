@@ -31,12 +31,13 @@ Find me at:
 
 ---
 
-# Table of contents
+# Agenda
 
 - From chat to agents
-- Landscape (models, costs, trade-offs)
+- Model landscape, costs, privacy, hype
 - AI tools
-- Practice, patterns, resources
+- Semi-interactive practice
+- Workflow patterns
 - Discussion
 
 ---
@@ -53,7 +54,7 @@ layout: two-cols-header
 
 ::left::
 
-_Traditional AI (chat):_
+_AI chat:_
 
 - Model: one _prompt_ → one _response_
 - No concept of an environment
@@ -72,68 +73,41 @@ Model and environment, connected by a _harness_:
 ::right::
 
 ```python
-def run_agent(task, tools, model):
+def run_agent_session(model, tools):
     context = [
         SystemPrompt(model),
-        Description(tools),
-        UserMessage(task),
+        tools.describe(),
     ]
 
-    while not should_terminate(context):
-        # Think
-        response = model.generate(context)
-        context.append(response.message)
+    while prompt := wait_for_input():
+        context.append(UserMessage(prompt))
 
-        if response.is_final_answer:
-            break
+        while not should_terminate(context):
+            # Think
+            response = model.generate(context)
+            context.append(response.message)
+            if response.is_final_answer:
+                break
 
-        # Interact with environment
-        observation = tools.execute(
-            response.tool_calls
-        )
+            # Interact with environment
+            observation = tools.execute(
+                response.tool_calls
+            )
 
-        # Observe
-        context.append(observation.describe())
+            # Observe
+            context.append(observation.describe())
 ```
-
----
-layout: two-cols-header
----
-
-# From chat to agents - workflow comparison
-
-::left::
-
-_Chat workflow:_
-
-1. Copy code into chat, "Fix this for me"
-2. Copy response back to codebase
-3. Run → error
-4. Copy error into chat, "Fix this for me"
-5. Copy response back to codebase
-6. Run → error
-7. …repeat until done
-
-::right::
-
-_Agent workflow:_
-
-1. "I have this issue in this file"
-2. **Loop:** study input, activate tools, check result
-3. **Loop:** study result, decide necessary changes, request edits
-4. **Loop:** study edit result, request execution
-5. **Loop:** study execution output, decide next step, act if not done
 
 ---
 
 # From chat to agents - takeaways
 
-- The agent loop replaces the human between the model and the environment
+- No more copy-pasting: the agent loop replaces the human between the model and the environment
 - The model sees the environment through the context: _context engineering_ is key
 - _Project environment_ is important: typing, linters, tests, documentation, ...
-- The _harness_ can be customized: _AGENTS.md_, _skills_, _system prompt_, ...
 - Asking the user can be a tool for the agent, instruct the model to use it
 - The loop continues until the model believes its goal is met
+- You can customize the harness
 
 ---
 layout: two-cols-header
@@ -236,6 +210,37 @@ They work in all harnesses.
 Private, can be fine-tuned for specific tasks.
 
 ---
+layout: two-cols-header
+---
+
+# Model landscape - resources
+
+::left::
+
+_Resources:_
+
+- Artificial Analysis: https://artificialanalysis.ai
+- Hugging Face: https://huggingface.co
+- Unsloth: https://unsloth.ai
+- Arena/LMArena: https://huggingface.co/spaces/lmarena-ai/arena-leaderboard, https://arena.ai
+
+::right::
+
+_Inference providers/routers:_
+
+- OpenCode Zen/Go: https://opencode.ai/zen
+- OpenRouter: https://openrouter.ai
+- GitHub Copilot: https://github.com/features/copilot
+
+---
+
+# Model landscape - overview
+
+<img src="/intelligence-vs-cost.png" style="border-radius: 4px;">
+
+<p style="opacity: 0.5; text-align: end;"><a href="https://artificialanalysis.ai/">https://artificialanalysis.ai/</a></p>
+
+---
 
 # Costs, privacy, and security
 
@@ -248,13 +253,13 @@ Private, can be fine-tuned for specific tasks.
 _Privacy:_
 
 - Free models: provider likely keeps and uses your data
-- Zero data retention: inference providers may promise not to keep data
 - Codebase reconstruction: feasible but unlikely, value is in human feedback for RL
+- Zero data retention: inference providers may promise not to keep data
 
 _Security:_
 
-- Trust but verify: agents can be confidently wrong
 - Tool misuse: malicious skills, broad tool access and permissions, data leaks via tool calls
+- Trust but verify: agents can be confidently wrong
 - Prompt injection: data and instructions are indistinguishable, data can contain hidden motives
 
 ---
@@ -280,37 +285,6 @@ Trade-offs:
 - Cognitive debt
 - No upskilling, downskilling / skill atrophy
 - Technical debt and complexity
-
----
-
-# Model landscape - overview
-
-<img src="/intelligence-vs-cost.png" style="border-radius: 4px;">
-
-<p style="opacity: 0.5; text-align: end;"><a href="https://artificialanalysis.ai/">https://artificialanalysis.ai/</a></p>
-
----
-layout: two-cols-header
----
-
-# Model landscape - resources
-
-::left::
-
-_Resources:_
-
-- Artificial Analysis: https://artificialanalysis.ai
-- Hugging Face: https://huggingface.co
-- Unsloth: https://unsloth.ai
-- Arena/LMArena: https://huggingface.co/spaces/lmarena-ai/arena-leaderboard, https://arena.ai
-
-::right::
-
-_Inference providers/routers:_
-
-- OpenCode Zen/Go: https://opencode.ai/zen
-- OpenRouter: https://openrouter.ai
-- GitHub Copilot: https://github.com/features/copilot
 
 ---
 layout: section
@@ -618,6 +592,8 @@ _Execute (prompt or `/to-tasks` + `/do-tasks`):_
 <p style="opacity: 1"><em>Reading:</em></p>
 
 - Agentic Coding is a Trap: https://larsfaye.com/articles/agentic-coding-is-a-trap
+- You can just say it: https://noperator.dev/posts/you-can-just-say-it
+- AI-Augmented Software Development Manifesto: https://ronanberder.com/ai-manifesto/
 
 _Skills:_
 
