@@ -103,7 +103,7 @@ def run_agent_session(model, tools):
 # From chat to agents - takeaways
 
 - No more copy-pasting: the agent loop replaces the human between the model and the environment
-- The model sees the environment through the context: _context engineering_ is key
+- The model only sees the context: _context engineering_ is key
 - _Project environment_ is important: typing, linters, tests, documentation, ...
 - Asking the user can be a tool for the agent, instruct the model to use it
 - The loop continues until the model believes its goal is met
@@ -134,7 +134,7 @@ _Commands:_
 
 ::right::
 
-_Skills:_
+_Skills (2026):_
 
 - Reusable instructions, scripts, resources
 - Requested by user or agent
@@ -144,7 +144,7 @@ _Agent configuration:_
 - System prompt
 - Permissions, model configuration
 
-_MCP:_
+_MCP (2025):_
 
 - Extra tools and resources
 
@@ -259,7 +259,7 @@ _Privacy:_
 _Security:_
 
 - Tool misuse: malicious skills, broad tool access and permissions, data leaks via tool calls
-- Trust but verify: agents can be confidently wrong
+- Trust but verify: LLMs can be confidently wrong
 - Prompt injection: data and instructions are indistinguishable, data can contain hidden motives
 
 ---
@@ -275,7 +275,7 @@ Every coin has two sides
 Productivity gains:
 
 - 0 to 1, for example personal software
-- 10-100x??? Real value: exploration, prototyping, second opinion, review
+- 10-100x??? Real value: exploration, prototyping, second opinion, review, documentation
 - ~1x, but better quality, less mental effort, or more time for learning
 
 ::right::
@@ -471,6 +471,23 @@ _`practice/` folder:_
 - `arxiv-md/`: Implementation milestones of the `arxiv-markdown-download.md` project
 
 ---
+layout: two-cols-header
+---
+
+# Practice
+
+<p style="opacity: 1">With the default <code>Build</code> agent:</p>
+
+- Implement one of the challenges, e.g. `@challenges/roman-integer.md`
+- Use the `/explain` command to ask for explanation
+- Ask for review, triggering the `review` skill
+- Ask for a changelog, triggering the `changelog` skill
+
+Start a new session and try the same with the `Teacher` agent on a different challenge
+
+Try to implement `projects/arxiv-markdown-download.md`
+
+---
 
 # Communication patterns
 
@@ -544,6 +561,27 @@ _Special agents (`teacher`):_
 
 ---
 
+# Complex tasks
+
+Not spec-driven development
+
+_Discuss (chat or `/grill-me`):_
+
+- Reach shared understanding, prevent guessing
+- Identify potential solutions
+
+_Prototype or plan:_
+
+- Prototype for better understanding
+- Create implementation plan if necessary (`/to-plan`)
+
+_Execute (prompt or `/to-tasks` + `/do-tasks`):_
+
+- Execute directly if task is small enough
+- Break into subtasks, execute and review one by one
+
+---
+
 # Pseudocode
 
 Not just for algorithms
@@ -563,27 +601,6 @@ for step in task:
 Confirm understanding and reinforce intent in context:
 
 > "Do you understand? Don't implement."
-
----
-
-# Complex tasks
-
-Not spec-driven development
-
-_Discuss (chat or `/grill-me`):_
-
-- Reach shared understanding, prevent guessing
-- Identify potential solutions
-
-_Prototype or plan:_
-
-- Prototype for better understanding
-- Create implementation plan if necessary (`/to-plan`)
-
-_Execute (prompt or `/to-tasks` + `/do-tasks`):_
-
-- Execute directly if task is small enough
-- Break into subtasks, execute and review one by one
 
 ---
 
