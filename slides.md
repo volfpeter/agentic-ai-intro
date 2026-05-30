@@ -115,7 +115,7 @@ layout: two-cols-header
 
 # Harness customization
 
-Guidance, memory, convenience, extension
+Guidance, memory, extension, convenience
 
 Think of it like software, keep it minimal and improve iteratively
 
@@ -154,7 +154,7 @@ layout: section
 
 # Landscape
 
-Labs, models, and trade-offs
+Labs, models, hype, and trade-offs
 
 ---
 
@@ -275,8 +275,8 @@ Every coin has two sides
 Productivity gains:
 
 - 0 to 1, for example personal software
-- 10-100x??? Real value: exploration, prototyping, second opinion, review, documentation
-- ~1x, but better quality, less mental effort, or more time for learning
+- 10-100x??? Real value: exploration, prototyping, second opinion, documentation
+- ~1x, but better quality, more time for learning, or less mental effort
 
 ::right::
 
@@ -475,6 +475,8 @@ layout: two-cols-header
 ---
 
 # Practice
+
+In the `practice/` folder
 
 <p style="opacity: 1">With the default <code>Build</code> agent:</p>
 
