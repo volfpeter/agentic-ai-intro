@@ -117,7 +117,7 @@ layout: two-cols-header
 
 Guidance, memory, extension, convenience
 
-Think of it like software, keep it minimal and improve iteratively
+Think of it like software; keep it minimal and improve iteratively
 
 ::left::
 
@@ -248,7 +248,7 @@ _Inference providers/routers:_
 
 - API pricing (per million tokens): input, output, and cache read
 - Agentic AI is token-hungry; cache read is often the dominant factor
-- Subscriptions are heavily subsidised vs. API pricing, >10-20x
+- Subscriptions are heavily subsidized vs. API pricing, >10-20x
 
 _Privacy:_
 
@@ -555,7 +555,7 @@ _Ask for explanation (`/explain`, `/review`):_
 - Provide pointers and topics for learning
 - Does it need to be this complicated?
 
-_Special agents (`teacher`):_
+_Special agents (`Teacher`):_
 
 - Do not solve the problem
 - Assess the user's understanding through questions
@@ -646,7 +646,7 @@ Twitter/X:
 
 ::right::
 
-YouTube, podcast:
+YouTube, podcasts:
 
 - Lex Fridman Podcast: https://lexfridman.com/podcast
 - Dwarkesh Podcast: https://www.dwarkesh.com/podcast
