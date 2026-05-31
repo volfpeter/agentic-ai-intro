@@ -36,9 +36,8 @@ Find me at:
 - From chat to agents
 - Model landscape, costs, privacy, hype
 - AI tools
-- Semi-interactive practice
-- Workflow patterns
-- Discussion
+- Practice
+- Tips for working with agents
 
 ---
 layout: section
@@ -275,7 +274,7 @@ Every coin has two sides
 Productivity gains:
 
 - 0 to 1, for example personal software
-- 10-100x??? Real value: exploration, prototyping, second opinion, documentation
+- 10-100x??? Real value: exploration, prototyping, second opinion, documentation, background tasks
 - ~1x, but better quality, more time for learning, or less mental effort
 
 ::right::
@@ -490,6 +489,14 @@ Start a new session and try the same with the `Teacher` agent on a different cha
 Try to implement `projects/arxiv-markdown-download.md`
 
 ---
+layout: section
+---
+
+# Working with agents
+
+Common sense
+
+---
 
 # Communication patterns
 
@@ -509,9 +516,9 @@ _Self-analysis:_
 
 ---
 
-# Prompting techniques
+# Prompt inversion
 
-<p style="opacity: 1"><em>Prompt inversion:</em></p>
+<p style="opacity: 1"><em>Meta-prompting:</em></p>
 
 - Before acting: ask the agent to draft a better prompt
 - After failure: ask what prompt would have worked better
