@@ -5,6 +5,8 @@ class: text-left
 highlighter: shiki
 lineNumbers: true
 title: Introduction to Agentic AI
+author: Peter Volf
+titleTemplate: "%s"
 ---
 
 # Agentic AI
