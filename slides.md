@@ -68,8 +68,8 @@ _Agentic AI:_
 Model and environment, connected by a _harness_:
 
 - Context initialization and management
+- Interact using _tools_ (read, write, bash, ask)
 - Iterative loop: think → interact → observe
-- Interact with _tools_ (read, write, bash, ask)
 
 ::right::
 
@@ -276,7 +276,7 @@ Every coin has two sides
 Productivity gains:
 
 - 0 to 1, for example personal software
-- 10-100x??? Real value: exploration, prototyping, second opinion, documentation, background tasks
+- 10-100x??? Real value: exploration, prototyping, second opinion, background tasks
 - ~1x, but better quality, more time for learning, or less mental effort
 
 ::right::
@@ -483,6 +483,7 @@ In the `practice/` folder
 
 - Implement one of the challenges, e.g. `@challenges/roman-integer.md`
 - Use the `/explain` command to ask for explanation
+- Break something in the code, inform the agent that you made changes
 - Ask for review, triggering the `review` skill
 - Ask for a changelog, triggering the `changelog` skill
 
@@ -525,15 +526,15 @@ _Self-analysis:_
 - Before acting: ask the agent to draft a better prompt
 - After failure: ask what prompt would have worked better
 
-_Declarative prompting (`/declarative`):_
-
-- State your goal and success criteria, not how to get there
-- Let the agent decide the approach
-
 _Summarize (`/checkpoint`):_
 
 - Produce a self-contained prompt for a new session
 - Start fresh with clean, informative context
+
+_Declarative prompting (`/declarative`):_
+
+- State your goal and success criteria, not how to get there
+- Let the agent decide the approach
 
 ---
 
