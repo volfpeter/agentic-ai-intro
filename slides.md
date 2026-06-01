@@ -68,7 +68,7 @@ _Agentic AI:_
 Model and environment, connected by a _harness_:
 
 - Context initialization and management
-- Interact using _tools_ (read, write, bash, ask)
+- Interact using _tools_ (read, write, bash)
 - Iterative loop: think → interact → observe
 
 ::right::
@@ -179,9 +179,10 @@ Subscription may not work in all agent harnesses.
 - Moonshot AI: Kimi k2.6
 - DeepSeek: DeepSeek v4 Pro and v4 Flash
 - Z.AI: GLM 5.1
-- Xiaomi: Mimo v2.5 Pro and v2.5 Flash
+- Xiaomi: Mimo v2.5 Pro, v2.5, and v2.5 Flash
 - Alibaba: Qwen 3.7 Max
-- Minimax: Minimax m2.5 and m2.7
+- Minimax: Minimax m2.5 and m2.7 (m3 preview)
+- Nvidia: Nemotron 3 Ultra
 
 Close to proprietary models (at least for coding) with far better pricing.
 
@@ -229,7 +230,7 @@ _Resources:_
 
 _Inference providers/routers:_
 
-- OpenCode Zen/Go: https://opencode.ai/zen
+- OpenCode Zen: https://opencode.ai/zen
 - OpenRouter: https://openrouter.ai
 - GitHub Copilot: https://github.com/features/copilot
 
@@ -275,7 +276,7 @@ Every coin has two sides
 
 Productivity gains:
 
-- 0 to 1, for example personal software
+- 0 to 1, for example personal software, prototyping
 - 10-100x??? Real value: exploration, prototyping, second opinion, background tasks
 - ~1x, but better quality, more time for learning, or less mental effort
 
@@ -623,6 +624,7 @@ Confirm understanding and reinforce intent in context:
 - Agentic Coding is a Trap: https://larsfaye.com/articles/agentic-coding-is-a-trap
 - You can just say it: https://noperator.dev/posts/you-can-just-say-it
 - AI-Augmented Software Development Manifesto: https://ronanberder.com/ai-manifesto/
+- Code is Cheap Now. Software isn't: https://www.chrisgregori.dev/opinion/code-is-cheap-now-software-isnt
 
 _Skills:_
 
