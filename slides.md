@@ -515,8 +515,8 @@ _Self-analysis:_
 - Why do you think that?
 - Where did you find this information?
 - What led you to that decision?
-- What would make you change your mind?
 - Why not use a simpler, more standard approach?
+- What would make you change your mind?
 
 ---
 
@@ -524,7 +524,7 @@ _Self-analysis:_
 
 <p style="opacity: 1"><em>Meta-prompting:</em></p>
 
-- Before acting: ask the agent to draft a better prompt
+- Before acting: ask the agent to draft a prompt for a task
 - After failure: ask what prompt would have worked better
 
 _Summarize (`/checkpoint`):_
