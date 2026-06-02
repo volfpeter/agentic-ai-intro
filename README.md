@@ -1,5 +1,7 @@
 # Introduction to Agentic AI
 
+Last updated: 2026-06-01
+
 ## Slides
 
 The slides are written with [Slidev](https://sli.dev/), they are in `slides.md`.

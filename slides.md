@@ -11,7 +11,7 @@ titleTemplate: "%s"
 
 # Agentic AI
 
-Getting started
+Getting started (2026-06-01)
 
 ---
 
